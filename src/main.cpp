@@ -211,11 +211,10 @@ void set_output(Registry *reg)
 
                 QString uuid = dev->uuid();
                 //if (cmd_args->cmd_set.uuid != uuid) {
-                if(!cmd_args->cmd_set.contains(uuid)){
+                if(!cmd_args->cmd_set.contains(uuid) || cmd_args->cmd_set[QString(uuid)].used) {
                     qDebug() << "skip output:" << uuid<<"---"<<uuid;
                     return;
                 }
-                
                 qDebug() << "start set output " << uuid;
                 for (auto m : dev->modes()) {
                     if (m.size.width() == cmd_args->cmd_set[uuid].width
