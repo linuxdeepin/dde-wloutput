@@ -47,8 +47,3 @@ License: CC0-1.0
 Files: .clang-format
 Copyright: None
 License: CC0-1.0
-
-# main.cpp
-Files: src/main.cpp
-Copyright: None
-License: UnionTech Software Technology Co., Ltd.
